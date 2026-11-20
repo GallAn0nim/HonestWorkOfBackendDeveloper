@@ -9,3 +9,5 @@ obj/
 .claude/
 .DS_Store
 CV-*.pdf
+CLAUDE.md
+start.command
