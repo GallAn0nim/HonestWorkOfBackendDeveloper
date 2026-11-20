@@ -1,0 +1,11 @@
+**/node_modules
+**/bin
+**/obj
+dist
+test-results
+playwright-report
+.git
+.idea
+.claude
+*.pdf
+api
