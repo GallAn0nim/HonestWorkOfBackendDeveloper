@@ -24,6 +24,16 @@ npm run dev   # page on http://localhost:5173, /api is proxied to the API
 
 `npm run dev` alone also works; runs then report the API as unreachable.
 
+## Run with Docker
+
+```bash
+docker compose up --build -d   # Postgres, API and page on http://localhost:8080
+docker compose down            # stop (add -v to also delete the database)
+```
+
+The API runs in Development mode, so migrations apply on start. The database password in
+`docker-compose.yml` is for this local setup only.
+
 ## Test
 
 ```bash

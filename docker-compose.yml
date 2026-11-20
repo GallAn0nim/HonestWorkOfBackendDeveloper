@@ -18,6 +18,9 @@ services:
       # Development runs migrations on start and skips the HTTPS redirect (no TLS in this local setup)
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__HonestWork: Host=db;Database=honestwork;Username=honestwork;Password=honestwork
+    volumes:
+      # keeps cookie encryption keys, so logins survive an API rebuild
+      - api-keys:/root/.aspnet/DataProtection-Keys
     depends_on:
       db:
         condition: service_healthy
@@ -31,3 +34,4 @@ services:
 
 volumes:
   db-data:
+  api-keys:
