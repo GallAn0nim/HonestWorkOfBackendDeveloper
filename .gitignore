@@ -11,3 +11,4 @@ obj/
 CV-*.pdf
 CLAUDE.md
 start.command
+start-docker.command

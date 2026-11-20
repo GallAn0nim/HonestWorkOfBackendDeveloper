@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: honestwork
+      POSTGRES_USER: honestwork
+      POSTGRES_PASSWORD: honestwork
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U honestwork -d honestwork"]
+      interval: 2s
+      retries: 30
+
+  api:
+    build: ./api
+    environment:
+      # Development runs migrations on start and skips the HTTPS redirect (no TLS in this local setup)
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__HonestWork: Host=db;Database=honestwork;Username=honestwork;Password=honestwork
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+
+volumes:
+  db-data:
