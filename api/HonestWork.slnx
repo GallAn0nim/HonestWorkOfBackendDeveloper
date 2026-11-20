@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HonestWork.Api.Tests/HonestWork.Api.Tests.csproj" />
+  <Project Path="HonestWork.Api/HonestWork.Api.csproj" />
+</Solution>

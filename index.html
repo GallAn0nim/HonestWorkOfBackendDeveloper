@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oskar Gruszczyński · backend developer</title>
+  <meta name="description" content="Oskar Gruszczyński — honest work of a backend developer.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Oskar Gruszczyński · backend developer">
+  <meta property="og:description" content="Honest work of a backend developer.">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Oskar Gruszczyński</h1>
+      <p class="tagline">Honest work of a backend developer</p>
+      <nav aria-label="Professional links">
+        <a href="https://github.com/GallAn0nim" rel="me" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/oskar-gruszczynski-648aa717a/" rel="me" target="_blank">LinkedIn</a>
+        <a href="/api/cv" target="_blank">Curriculum Vitae</a>
+        <a href="mailto:oskar171@gmail.com">Contact me</a>
+      </nav>
+    </header>
+    <footer class="site-foot">
+      <p>© 2026 Oskar Gruszczyński</p>
+      <p>No tracking · one sign-in cookie</p>
+      <a href="/privacy.html" target="_blank">Privacy</a>
+    </footer>
+  </main>
+
+  <div class="inspect-bar" hidden>
+    <p class="hint">Move the lens · Arrow keys move it · Enter opens a hex · Esc leaves</p>
+    <button type="button" class="bulb-btn" aria-label="Light bulb" aria-pressed="false" hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>
+    </button>
+    <span class="inspect-label" aria-hidden="true">inspect</span>
+    <button type="button" class="inspect-btn" aria-label="Inspect hidden layer" aria-pressed="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+    </button>
+  </div>
+
+  <section class="world" inert aria-label="Hidden layer">
+    <div class="comb"></div>
+  </section>
+  <div class="lens-ring" aria-hidden="true"></div>
+
+  <dialog class="open-hex" aria-label="Module">
+    <button type="button" class="close-hex round" aria-label="Close">✕</button>
+    <div class="hex big"><div class="hex-inner"></div></div>
+  </dialog>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
