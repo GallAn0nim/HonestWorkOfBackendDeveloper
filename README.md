@@ -11,7 +11,7 @@ result itself. When the API can't be reached (for example on a static host), the
 ## Requirements
 
 - Node.js 20.19+ (or 22.12+) and npm, as Vite 8 requires
-- .NET 10 SDK (for the API and its tests)
+- .NET 11 SDK (for the API and its tests)
 - Google Chrome (the browser tests use the installed Chrome; nothing is downloaded)
 
 ## Run locally
@@ -53,7 +53,7 @@ npm run test:e2e          # browser tests (Playwright): page checklist, API, off
 | `src/engine.ts` | shared module shell: playback, budget, API call |
 | `src/sorting.ts`, `src/maze.ts` | algorithm names, validation, API data checks (no DOM, no network) |
 | `src/sortingModule.ts`, `src/mazeModule.ts` | the sorting and maze modules |
-| `api/HonestWork.Api` | .NET 10 minimal API: `GET /api/sort/random`, `POST /api/sort`, `GET /api/maze/generation`, `POST /api/maze` |
+| `api/HonestWork.Api` | .NET 11 API: `GET /api/sort/random`, `POST /api/sort`, `GET /api/maze/generation`, `POST /api/maze` |
 | `src/observabilityModule.ts` | Observability hex: live logs (SSE from `GET /api/observability/logs`) and metrics (`GET /api/observability/metrics`) |
 | `e2e/prd.e2e.ts` | browser tests |
 
